@@ -64,12 +64,3 @@ jobs:
 
         # execute the tests
         dotnet test -l:trx
-
-    # Using the trx-parser action
-    - name: Parse Trx files
-      uses: rajbos-actions/trx-parser@v0.3.0
-      id: trx-parser
-      with:
-        TRX_PATH: ${{ github.workspace }}\\dotnet-core-webapp.webtests\TestResults #This should be the path to your TRX files
-        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
